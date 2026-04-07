@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>碩思有限公司 | Source Insight Co. Ltd.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-zh">碩思</span>
+        <span class="logo-divider">|</span>
+        <span class="logo-en">Source Insight</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about"    data-i18n="nav.about"></a></li>
+        <li><a href="#services" data-i18n="nav.services"></a></li>
+        <li><a href="#strengths"data-i18n="nav.strengths"></a></li>
+        <li><a href="#contact"  data-i18n="nav.contact"></a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="zh">中文</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" data-lang="ja">日本語</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="開啟選單">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tagline-pre" data-i18n="hero.tagline"></p>
+      <h1 class="hero-title">
+        <span class="title-zh">碩思有限公司</span>
+        <span class="title-en">Source Insight Co. Ltd.</span>
+      </h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle"></p>
+      <p class="hero-desc" data-i18n-html="hero.desc"></p>
+      <div class="hero-cta">
+        <a href="#services" class="btn btn-primary"  data-i18n="hero.cta1"></a>
+        <a href="#contact"  class="btn btn-outline"  data-i18n="hero.cta2"></a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span data-i18n="hero.scroll"></span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label" data-i18n="about.label"></p>
+        <h2 class="section-title"  data-i18n="about.title"></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p data-i18n-html="about.p1"></p>
+          <p data-i18n-html="about.p2"></p>
+          <p data-i18n-html="about.p3"></p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-icon">🇹🇼 🇯🇵</div>
+            <div class="stat-label" data-i18n="about.stat1"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🛡</div>
+            <div class="stat-label" data-i18n="about.stat2"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🤝</div>
+            <div class="stat-label" data-i18n="about.stat3"></div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-label" data-i18n="about.stat4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label" data-i18n="services.label"></p>
+        <h2 class="section-title"  data-i18n="services.title"></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="32" r="12" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="44" cy="32" r="12" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M28 24 Q32 20 36 24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M28 40 Q32 44 36 40" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 data-i18n="svc1.title"></h3>
+          <p  data-i18n="svc1.desc"></p>
+          <ul class="service-list">
+            <li data-i18n="svc1.li1"></li>
+            <li data-i18n="svc1.li2"></li>
+            <li data-i18n="svc1.li3"></li>
+            <li data-i18n="svc1.li4"></li>
+          </ul>
+        </div>
+
+        <div class="service-card service-card--featured">
+          <div class="service-number">02</div>
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 8 L52 20 L52 44 L32 56 L12 44 L12 20 Z" stroke="currentColor" stroke-width="2.5"/>
+              <path d="M32 20 L42 26 L42 38 L32 44 L22 38 L22 26 Z" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="32" cy="32" r="4" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 data-i18n="svc2.title"></h3>
+          <p  data-i18n="svc2.desc"></p>
+          <ul class="service-list">
+            <li data-i18n="svc2.li1"></li>
+            <li data-i18n="svc2.li2"></li>
+            <li data-i18n="svc2.li3"></li>
+            <li data-i18n="svc2.li4"></li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <div class="service-icon-wrap">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 48 L20 32 L30 40 L42 20 L56 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="20" cy="32" r="3" fill="currentColor"/>
+              <circle cx="30" cy="40" r="3" fill="currentColor"/>
+              <circle cx="42" cy="20" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 data-i18n="svc3.title"></h3>
+          <p  data-i18n="svc3.desc"></p>
+          <ul class="service-list">
+            <li data-i18n="svc3.li1"></li>
+            <li data-i18n="svc3.li2"></li>
+            <li data-i18n="svc3.li3"></li>
+            <li data-i18n="svc3.li4"></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Strengths -->
+  <section id="strengths">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label" data-i18n="strengths.label"></p>
+        <h2 class="section-title"  data-i18n="strengths.title"></h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="strengths-grid">
+        <div class="strength-item">
+          <div class="strength-num">01</div>
+          <h4 data-i18n="str1.title"></h4>
+          <p  data-i18n="str1.desc"></p>
+        </div>
+        <div class="strength-item">
+          <div class="strength-num">02</div>
+          <h4 data-i18n="str2.title"></h4>
+          <p  data-i18n="str2.desc"></p>
+        </div>
+        <div class="strength-item">
+          <div class="strength-num">03</div>
+          <h4 data-i18n="str3.title"></h4>
+          <p  data-i18n="str3.desc"></p>
+        </div>
+        <div class="strength-item">
+          <div class="strength-num">04</div>
+          <h4 data-i18n="str4.title"></h4>
+          <p  data-i18n="str4.desc"></p>
+        </div>
+        <div class="strength-item">
+          <div class="strength-num">05</div>
+          <h4 data-i18n="str5.title"></h4>
+          <p  data-i18n="str5.desc"></p>
+        </div>
+        <div class="strength-item">
+          <div class="strength-num">06</div>
+          <h4 data-i18n="str6.title"></h4>
+          <p  data-i18n="str6.desc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label"  data-i18n="contact.label"></p>
+        <h2 class="section-title" data-i18n="contact.title"></h2>
+        <div class="section-divider"></div>
+        <p class="contact-intro"  data-i18n="contact.intro"></p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <p class="contact-label" data-i18n="contact.addr.label"></p>
+              <p class="contact-value" data-i18n="contact.addr.value"></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <p class="contact-label" data-i18n="contact.email.label"></p>
+              <p class="contact-value">toshikatsu1978@gmail.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.06 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <p class="contact-label" data-i18n="contact.tel.label"></p>
+              <p class="contact-value">0925-251-252</p>
+            </div>
+          </div>
+          <div class="contact-languages">
+            <p class="contact-label" data-i18n="contact.lang.label"></p>
+            <div class="lang-tags">
+              <span>繁體中文</span>
+              <span>日本語</span>
+              <span>English</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" data-i18n="form.name.label"></label>
+              <input type="text" id="name" data-i18n-placeholder="form.name.placeholder" required />
+            </div>
+            <div class="form-group">
+              <label for="company" data-i18n="form.company.label"></label>
+              <input type="text" id="company" data-i18n-placeholder="form.company.placeholder" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="form.email.label"></label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="service" data-i18n="form.service.label"></label>
+            <select id="service">
+              <option value="" disabled selected data-i18n="form.service.placeholder"></option>
+              <option value="matching" data-i18n="form.service.opt1"></option>
+              <option value="defense"  data-i18n="form.service.opt2"></option>
+              <option value="market"   data-i18n="form.service.opt3"></option>
+              <option value="other"    data-i18n="form.service.opt4"></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="form.message.label"></label>
+            <textarea id="message" rows="5" data-i18n-placeholder="form.message.placeholder" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" data-i18n="form.submit"></button>
+          <p class="form-note" data-i18n="form.note"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-zh">碩思有限公司</span>
+          <span class="logo-en-sm">Source Insight Co. Ltd.</span>
+          <p data-i18n="footer.tagline"></p>
+        </div>
+        <div class="footer-links">
+          <a href="#about"     data-i18n="nav.about"></a>
+          <a href="#services"  data-i18n="nav.services"></a>
+          <a href="#strengths" data-i18n="nav.strengths"></a>
+          <a href="#contact"   data-i18n="nav.contact"></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 碩思有限公司 Source Insight Co. Ltd. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
