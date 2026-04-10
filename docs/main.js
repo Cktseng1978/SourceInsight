@@ -434,7 +434,7 @@ contactForm.addEventListener('submit', async (e) => {
   try {
     const res = await fetch('https://formspree.io/f/meepbrzq', {
       method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body:    JSON.stringify(payload),
     });
 
