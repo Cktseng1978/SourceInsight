@@ -412,26 +412,58 @@ window.addEventListener('scroll', updateActiveNav, { passive: true });
 
 // ---------- Contact form ----------
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = contactForm.querySelector('button[type="submit"]');
-  const submitMessages = { zh: '傳送中…', en: 'Sending…', ja: '送信中…' };
+
+  const submitMessages = { zh: '傳送中…',              en: 'Sending…',       ja: '送信中…' };
   const doneMessages   = { zh: '✓ 已成功送出，謝謝您！', en: '✓ Sent! Thank you.', ja: '✓ 送信完了しました。' };
+  const errorMessages  = { zh: '✗ 傳送失敗，請稍後再試', en: '✗ Failed. Please try again.', ja: '✗ 送信失敗。もう一度お試しください。' };
+
   btn.textContent = submitMessages[currentLang] || submitMessages.zh;
   btn.disabled = true;
 
-  setTimeout(() => {
+  const payload = {
+    name:    document.getElementById('name').value.trim(),
+    company: document.getElementById('company').value.trim(),
+    email:   document.getElementById('email').value.trim(),
+    service: document.getElementById('service').value,
+    message: document.getElementById('message').value.trim(),
+  };
+
+  try {
+    const res = await fetch('https://formspree.io/f/meepbrzq', {
+      method:  'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(payload),
+    });
+
+    if (!res.ok) throw new Error('Server error');
+
     btn.textContent = doneMessages[currentLang] || doneMessages.zh;
     btn.style.background = '#2d6a4f';
     btn.style.color = '#fff';
     contactForm.reset();
+
     setTimeout(() => {
       btn.style.background = '';
       btn.style.color = '';
       btn.disabled = false;
-      applyLanguage(currentLang); // restore translated button text
+      applyLanguage(currentLang);
     }, 4000);
-  }, 1200);
+
+  } catch (_) {
+    btn.textContent = errorMessages[currentLang] || errorMessages.zh;
+    btn.style.background = '#b00020';
+    btn.style.color = '#fff';
+
+    setTimeout(() => {
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.disabled = false;
+      applyLanguage(currentLang);
+    }, 4000);
+  }
 });
 
 // ---------- Init ----------
